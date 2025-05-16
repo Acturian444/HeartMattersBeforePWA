@@ -135,7 +135,7 @@ nav {
 }
 
 /* Add styles for Info link */
-.nav-links a[href="#info"] {
+.nav-links a[href="info.html"] {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 1.1rem;

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Heart Matters</title>
+    <meta name="description" content="Contact Heart Matters - Get in touch with us">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        main {
+            margin: 0;
+            padding: 0;
+        }
+        .contact-section {
+            min-height: calc(100vh - 120px - 80px); /* header + footer approx heights */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem 0 2rem;
+            background-color: #fffcf1;
+            margin-bottom: 0;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .contact-title {
+            font-family: 'Anton', sans-serif;
+            font-size: 3.5rem;
+            color: #000000;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.5rem;
+            color: #000000;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .contact-email {
+            color: #c10016;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-email:hover {
+            opacity: 0.8;
+        }
+
+        .social-links-container {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #000000;
+            transition: transform 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+        }
+
+        .social-link i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-link span {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .whatsapp-group {
+            margin-top: 3rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #c10016;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .whatsapp-group:hover {
+            transform: translateY(-5px);
+        }
+
+        .whatsapp-group a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: #fffcf1;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .whatsapp-group i {
+            font-size: 2rem;
+            color: #fffcf1;
+        }
+
+        @media (max-width: 768px) {
+            .contact-title {
+                font-size: 2.5rem;
+            }
+
+            .contact-info {
+                font-size: 1.2rem;
+            }
+
+            .social-links-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+
+        .nav-links a[href="info.html"] {
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 1.1rem;
+            letter-spacing: 1.5px;
+            font-family: 'Anton', sans-serif;
+            color: #c10016;
+        }
+
+        .nav-links a[href="theheartroom.html"] {
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 1.1rem;
+            letter-spacing: 1.5px;
+            font-family: 'Anton', sans-serif;
+            color: #c10016;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav-centered">
+                <ul class="nav-links nav-left">
+                    <li><a href="info.html" class="active">INFO</a></li>
+                </ul>
+                <a href="index.html" class="logo-text center-logo">Heart Matters</a>
+                <ul class="nav-links nav-right">
+                    <li><a href="theheartroom.html">The Heart Room</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="contact-content">
+                <h1 class="contact-title">Contact Us</h1>
+                <div class="contact-info">
+                    <p>Email us at: <a href="mailto:info@wereheartmatters.com" class="contact-email">info@wereheartmatters.com</a></p>
+                    <p>Located in the Bay Area</p>
+                </div>
+
+                <div class="social-links-container">
+                    <a href="https://www.instagram.com/heartmatters__/" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@heartmatters__?lang=en" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-tiktok"></i>
+                        <span>TikTok</span>
+                    </a>
+                </div>
+
+                <div class="whatsapp-group">
+                    <a href="https://chat.whatsapp.com/Ehbe4jbYSm230EQK9263lh" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Join Our WhatsApp Group Chat</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 2rem 0 1.5rem 0; width: 100%;" />
+            <p style="text-align: center;">&copy; 2025 Heart Matters. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
