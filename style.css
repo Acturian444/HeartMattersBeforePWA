@@ -958,7 +958,7 @@ footer {
 #show-description .content p {
     font-size: 1.25rem;
     line-height: 1.8;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-align: center;
     max-width: 800px;
     margin-left: auto;
@@ -969,7 +969,8 @@ footer {
 }
 
 #show-description .content p:last-child {
-    margin-top: 1rem;
+    margin-top: 0;
+    margin-bottom: 3rem;
     color: #c10016;
     font-weight: 600;
 } 
