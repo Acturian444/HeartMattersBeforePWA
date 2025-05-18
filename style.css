@@ -15,13 +15,16 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: #fffcf1;
+    -webkit-overflow-scrolling: touch;
 }
 
 body {
     font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     color: var(--accent-text);
-    background-color: #fff;
+    background-color: #fffcf1;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Typography */
@@ -141,7 +144,21 @@ nav {
     font-size: 1.1rem;
     letter-spacing: 1.5px;
     font-family: 'Anton', sans-serif;
-    color: #c10016;
+    color: #000000;
+}
+
+/* Add styles for Share Your Story link */
+.nav-links a[href="https://tally.so/r/mVypp6"] {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    font-family: 'Anton', sans-serif;
+    color: #000000;
+    display: inline-block;
+    white-space: nowrap;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 /* Add styles for The Heart Room link */
@@ -151,9 +168,21 @@ nav {
     font-size: 1.1rem;
     letter-spacing: 1.5px;
     font-family: 'Anton', sans-serif;
+    color: #000000;
+    display: inline-block;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.nav-links a[href="theheartroom.html"]:hover {
     color: #c10016;
 }
 
+.nav-links a[href="theheartroom.html"].active {
+    color: #c10016;
+}
+
+/* Remove any conflicting styles */
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--primary-color);
@@ -713,16 +742,29 @@ footer {
 
 @media (max-width: 900px) {
     .nav-centered {
-        flex-direction: column;
-        gap: 0.5rem;
-        min-height: unset;
-    }
-    .nav-left, .nav-right {
+        flex-direction: row;
         justify-content: center;
-        flex: unset;
+        align-items: center;
+        min-height: unset;
+        position: relative;
     }
     .center-logo {
-        margin: 0.5rem 0;
+        flex: 1 1 auto;
+        text-align: center;
+        margin: 0;
+        position: relative;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        font-size: 1.5rem;
+        display: block;
+    }
+    .hamburger {
+        position: absolute;
+        left: 1.2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
     }
 }
 
@@ -887,10 +929,12 @@ footer {
 }
 
 #show-hero h1 {
-    font-size: 4.5rem;
-    color: #fff;
+    font-size: 2.5rem;
+    color: #fffcf1;
+    text-align: center;
     text-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    margin-bottom: 1rem;
+    text-transform: none;
+    margin-top: -40rem;
 }
 
 #show-hero p {
@@ -935,6 +979,7 @@ footer {
 }
 
 #show-description h2 {
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -973,4 +1018,105 @@ footer {
     margin-bottom: 3rem;
     color: #c10016;
     font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    #show-hero h1,
+    #show-description h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #show-hero h1,
+    #show-description h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Add styles for hamburger menu icon */
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: none;
+}
+
+.hamburger i {
+    color: #000000;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .hamburger {
+        display: block;
+    }
+    .nav-links, .nav-left, .nav-right {
+        display: none !important;
+    }
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1200;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fffcf1;
+    color: #c10016;
+    font-family: 'Anton', 'DM Sans', sans-serif;
+    transition: opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
+.menu-overlay.open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    opacity: 1;
+    pointer-events: auto;
+}
+.menu-overlay .close-btn {
+    font-size: 2.2rem;
+    color: #c10016;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    cursor: pointer;
+    z-index: 1202;
+}
+.menu-overlay nav {
+    width: 100%;
+    margin-top: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2.5rem;
+}
+.menu-overlay a {
+    font-family: 'Anton', 'DM Sans', sans-serif;
+    font-size: 2rem;
+    color: #000000;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    transition: color 0.2s;
+}
+.menu-overlay a:hover {
+    color: #a20013;
+}
+@media (max-width: 600px) {
+    .menu-overlay nav {
+        padding-left: 1.2rem;
+    }
+    .menu-overlay a {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
 } 

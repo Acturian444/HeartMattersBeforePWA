@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fffcf1">
     <title>Heart Matters - Home</title>
     <meta name="description" content="Heart Matters - A space for meaningful conversations and connections">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,14 +15,26 @@
 <body>
     <header>
         <div class="container">
-            <nav class="nav-centered">
+            <nav class="nav-centered" style="position:relative;">
+                <button class="hamburger" aria-label="Open menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <ul class="nav-links nav-left">
                     <li><a href="info.html">INFO</a></li>
+                    <li><a href="https://tally.so/r/mVypp6" target="_blank">SHARE YOUR STORY</a></li>
                 </ul>
                 <a href="index.html" class="logo-text center-logo">Heart Matters</a>
                 <ul class="nav-links nav-right">
-                    <li><a href="theheartroom.html">The Heart Room</a></li>
+                    <li><a href="theheartroom.html">THE HEART ROOM</a></li>
                 </ul>
+            </nav>
+        </div>
+        <div class="menu-overlay" id="menuOverlay">
+            <button class="close-btn" aria-label="Close menu" onclick="closeMenu()">&times;</button>
+            <nav>
+                <a href="info.html">INFO</a>
+                <a href="theheartroom.html">THE HEART ROOM</a>
+                <a href="https://tally.so/r/mVypp6" target="_blank" rel="noopener">SHARE YOUR STORY</a>
             </nav>
         </div>
     </header>
@@ -32,7 +45,7 @@
                 <div class="hero-text">
                     <h1>YOUR HEART MATTERS</h1>
                     <p class="subtitle">Come heal, grow, and feel seen</p>
-                    <a href="theheartroom.html" class="btn btn-primary">Enter</a>
+                    <a href="theheartroom.html" class="btn btn-primary">Step Inside</a>
                 </div>
                 <div class="hero-image">
                     <!-- Image removed: now using background image in CSS -->
@@ -226,6 +239,14 @@
             }, 5000);
         }, 1200);
     });
+    function openMenu() {
+        document.getElementById('menuOverlay').classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+        document.getElementById('menuOverlay').classList.remove('open');
+        document.body.style.overflow = '';
+    }
     </script>
 </body>
 </html> 
