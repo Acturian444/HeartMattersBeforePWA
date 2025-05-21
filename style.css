@@ -1386,4 +1386,12 @@ h1, h2, h3, h4, h5, h6, .logo-text, .center-logo, .nav-links a[href="info.html"]
   .cta-container {
     margin-top: 24rem !important;
   }
+}
+
+@font-face {
+    font-family: 'Anton';
+    src: url('fonts/anton.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
 } 
