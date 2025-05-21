@@ -1231,4 +1231,159 @@ footer {
     justify-content: center;
     margin-top: 2rem;
   }
+}
+
+/* Be Part of the Room Section */
+#join {
+    text-align: center;
+    width: 100vw;
+    padding: 6rem 0 4rem 0;
+    background-color: #fffcf1;
+    margin-bottom: 0;
+}
+
+#join .content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+#join .section-heading {
+    margin-top: 4rem;
+    font-size: 2.5rem;
+    font-family: 'Anton', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+#join .section-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.25rem;
+    color: #222;
+    font-weight: 600;
+    line-height: 1.7;
+    margin: 0 auto 2.5rem auto;
+    max-width: 700px;
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+#join .social-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+#join .social-links a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#join .social-links a i {
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+#join .social-links a span {
+    font-size: 1rem;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 900px) {
+    #join {
+        padding: 4rem 0 3rem 0;
+    }
+    
+    #join .section-heading {
+        font-size: 2.2rem;
+        margin-top: 3rem;
+    }
+    
+    #join .section-body {
+        font-size: 1.2rem;
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #join {
+        padding: 3rem 0 2rem 0;
+    }
+    
+    #join .content {
+        padding: 0 1.5rem;
+    }
+    
+    #join .section-heading {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+    
+    #join .section-body {
+        font-size: 0.98rem;
+        padding: 0 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    #join .social-links {
+        gap: 1.5rem;
+    }
+    
+    #join .social-links a i {
+        font-size: 1.3rem;
+    }
+    
+    #join .social-links a span {
+        font-size: 0.9rem;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, .logo-text, .center-logo, .nav-links a[href="info.html"], .nav-links a[href="theheartroom.html"], .nav-links a[href="https://tally.so/r/mVypp6"], .mission-modern-title, .feature-title h2, #join .section-heading, .menu-overlay a {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400 !important;
+}
+
+.menu-overlay a[href="https://tally.so/r/mVypp6"]:visited {
+    color: #c10016 !important;
+}
+
+.mobile-br { display: none; }
+@media (max-width: 600px) {
+  .mobile-br {
+    display: block;
+    width: 100%;
+    height: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  #schedule .content.section-body > div[style*="margin-top: 16rem"] {
+    margin-top: 28rem !important;
+  }
+}
+
+.cta-container {
+  margin-top: 16rem;
+}
+@media (max-width: 600px) {
+  .cta-container {
+    margin-top: 24rem !important;
+  }
 } 
