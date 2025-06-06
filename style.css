@@ -611,10 +611,10 @@ footer {
 }
 
 .feature-action {
-    margin-top: -160px;
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    margin-top: 3rem;
 }
 
 .feature-action .btn {
@@ -636,7 +636,7 @@ footer {
         gap: 1.5rem;
     }
     .feature-action {
-        justify-content: flex-start;
+        margin-top: 2.5rem;
     }
     .mission-title, .feature-title {
         padding-right: 0;
@@ -763,6 +763,7 @@ footer {
     line-height: 1.4;
     text-shadow: 0 2px 8px rgba(0,0,0,0.10);
     white-space: normal;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .feature-grid {
@@ -811,7 +812,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 .feature-action .btn {
@@ -829,32 +830,21 @@ footer {
 @media (max-width: 900px) {
     .feature.modern-section {
         min-height: 500px;
+        background-position: center center;
     }
     .feature-above-door {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         max-width: 90%;
         padding: 0 1.5rem;
         margin: 3rem auto 2rem auto;
-    }
-    .feature-grid {
-        padding: 0 2rem;
-    }
-    .feature-title h2 {
-        font-size: 2.5rem;
-        margin-bottom: 1.2rem;
-    }
-    .feature-title p {
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-    }
-    .feature-action .btn {
-        font-size: 0.95rem;
-        padding: 0.6rem 1.3rem;
-        min-width: 140px;
+        line-height: 1.5;
     }
 }
 
 @media (max-width: 600px) {
+    .feature-action {
+        margin-top: 4rem !important;
+    }
     .feature.modern-section {
         min-height: 400px;
         padding-top: 0;
@@ -863,35 +853,10 @@ footer {
         flex-direction: column;
         align-items: center;
         position: relative;
+        background-position: center center;
     }
     .feature-above-door {
-        font-size: 1.1rem;
-        max-width: 90%;
-        padding: 0 1.5rem;
-        margin: -3rem auto 2rem auto;
-        line-height: 1.5;
-        order: -1;
-        position: relative;
-        z-index: 2;
-    }
-    .feature-grid {
-        padding: 0 2rem;
-        margin-top: 0;
-    }
-    .feature-title h2 {
-        font-size: 2.2rem;
-        margin-bottom: 1.2rem;
-    }
-    .feature-title p {
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-        line-height: 1.5;
-    }
-    .feature-action .btn {
-        font-size: 1rem;
-        padding: 0.7rem 1.5rem;
-        min-width: 160px;
-        margin-top: 0.5rem;
+        margin-top: 2.5rem !important;
     }
 }
 
@@ -1122,12 +1087,6 @@ footer {
     align-items: center;
     justify-content: flex-start;
     padding: 0 0.5rem;
-  }
-  .feature-action {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
   }
 }
 
@@ -1603,20 +1562,19 @@ h1, h2, h3, h4, h5, h6, .logo-text, .center-logo, .nav-links a[href="info.html"]
 
 /* --- Refined Scrolling Quotes Bar for Seamless Overlap --- */
 .scrolling-quotes-bar {
-  position: relative;
-  top: -1.2rem; /* overlap the previous section */
-  margin-bottom: -1.2rem; /* pull up the next section */
+  width: 100vw;
+  margin: 0;
   background: #fffcf1;
-  padding: 0.3rem 0;
-  font-size: 1.05rem;
-  z-index: 10;
-  border-radius: 0;
   border-top: 2px solid #c10016;
   border-bottom: 2px solid #c10016;
-  width: 100vw;
+  border-radius: 0;
+  padding: 0.3rem 0;
   display: flex;
   align-items: center;
   overflow: hidden;
+  position: relative;
+  z-index: 10;
+  font-size: 1.05rem;
 }
 
 .scrolling-quotes-track {
@@ -1624,6 +1582,8 @@ h1, h2, h3, h4, h5, h6, .logo-text, .center-logo, .nav-links a[href="info.html"]
   align-items: center;
   white-space: nowrap;
   animation: marquee-scroll 38s linear infinite;
+  will-change: transform;
+  min-width: 200%;
 }
 
 .scrolling-quote {
@@ -1643,29 +1603,41 @@ h1, h2, h3, h4, h5, h6, .logo-text, .center-logo, .nav-links a[href="info.html"]
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-/* Duplicate the quotes for seamless infinite scroll */
-.scrolling-quotes-track {
-  will-change: transform;
-}
-.scrolling-quotes-track {
-  min-width: 200%;
-}
-/* Responsive adjustments */
+
 @media (max-width: 900px) {
   .scrolling-quotes-bar {
+    width: 100vw;
+    padding: 0.2rem 0;
+    border-radius: 0;
     font-size: 0.95rem;
-    top: -0.7rem;
-    margin-bottom: -0.7rem;
-    padding: 0.10rem 0;
-    border-radius: 0 0 12px 12px;
+  }
+  .scrolling-quote {
+    font-size: 0.95rem;
+    margin: 0 1.2rem;
   }
 }
+
 @media (max-width: 600px) {
   .scrolling-quotes-bar {
-    font-size: 0.85rem;
-    top: -0.4rem;
-    margin-bottom: -0.4rem;
+    width: 100vw;
     padding: 0.07rem 0;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0;
+    font-size: 0.85rem;
+    top: 0;
+    margin-bottom: 0;
+  }
+  .scrolling-quote {
+    font-size: 0.85rem;
+    margin: 0 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .feature-above-door {
+    margin-top: 2.5rem !important;
+  }
+  .scrolling-quotes-bar {
+    top: 0;
+    margin-bottom: 0;
   }
 } 
