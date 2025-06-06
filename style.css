@@ -204,38 +204,6 @@ section {
     border-radius: 0;
 }
 
-section#about,
-.mission-modern {
-    background: #fffcf1 url('images/Our Mission Image.png') center center/cover no-repeat !important;
-    margin-bottom: 0;
-}
-
-.content,
-.mission .content,
-.feature .content {
-    background: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    padding: 0;
-    margin: 0;
-    max-width: none;
-}
-
-.footer-content {
-    width: 100%;
-    max-width: none;
-    padding: 4rem 4vw;
-    margin: 0;
-    box-shadow: none;
-    background: none;
-}
-
-.footer-main {
-    width: 100%;
-    box-shadow: none;
-    background: none;
-}
-
 /* Hero Section - Fixed 1920x1080 size */
 .hero {
     width: 1920px;
@@ -253,53 +221,50 @@ section#about,
     border-radius: 0;
     box-sizing: border-box;
     overflow: hidden;
+    position: relative;
+}
+
+.hero::before {
+    content: none !important;
 }
 
 .hero-content {
-    width: 100%;
-    max-width: none;
-    padding: 0 4vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-text {
     flex: 1 1 0;
-    text-align: left;
+    text-align: center;
+    max-width: 800px;
 }
 
 .hero-image {
-    flex: 1 1 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    background: #eee;
-    min-width: 250px;
-    min-height: 300px;
-    object-fit: cover;
+    display: none;
 }
 
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 0.25rem;
     line-height: 1.1;
-    color: #c10016;
+    color: #000000;
+    text-align: center;
 }
 
-.hero .subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: var(--accent-text);
-    font-weight: 700;
+/* Hero Section - Subtitle Styles */
+#home-hero .hero .subtitle,
+.hero-content .hero-text .subtitle {
+    font-size: 1.35rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 1.5rem !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 700 !important;
+    color: var(--accent-text) !important;
+    text-align: center;
+}
+
+.hero .btn {
+    margin: 0 auto;
 }
 
 .hero-main-image {
@@ -319,106 +284,40 @@ section#about,
     box-shadow: 0 16px 48px rgba(193,0,22,0.18), 0 3px 16px rgba(0,0,0,0.10);
 }
 
-@media (max-width: 1920px) {
+@media (min-width: 601px) and (max-width: 900px) {
     .hero {
-        width: 100vw;
-        height: 56.25vw; /* 16:9 ratio */
-        max-height: 100vh;
-    }
-}
-
-@media (max-width: 1080px) {
-    .hero {
-        height: 100vh;
-        min-height: 400px;
-    }
-}
-
-@media (max-width: 900px) {
-    .hero {
-        background-image: url('images/Hero Section Image-tablet.png');
-    }
-    .hero-content {
-        flex-direction: column;
-        gap: 2rem;
-        align-items: flex-start;
-        padding-top: 4rem;
-    }
-    .hero-text, .hero-image {
-        width: 100%;
-        text-align: left;
-        justify-content: flex-start;
-    }
-    .hero-image {
-        justify-content: center;
-    }
-    .hero-main-image {
-        max-width: 90vw;
-        border-radius: 16px;
-    }
-    .hero h1 {
-        font-size: 2.8rem !important;
-        line-height: 1.2;
-    }
-    .hero .subtitle {
-        font-size: 1.3rem !important;
-        line-height: 1.4;
+        background: url('images/Hero Section Image Tablet.png') center center/cover no-repeat;
     }
 }
 
 @media (max-width: 600px) {
     .hero {
-        background-image: url('images/Hero Section Image-mobile.png');
-        padding: 2rem 0.5rem;
-    }
-    .hero-content {
-        padding-top: 3rem;
-    }
-    .hero h1 {
-        font-size: 2.2rem !important;
-        line-height: 1.2;
-    }
-    .hero .subtitle {
-        font-size: 1.1rem !important;
-        line-height: 1.4;
-    }
-    .hero-image img {
-        min-width: 120px;
-        min-height: 120px;
-    }
-    .section-heading {
-        font-size: 1.75rem !important;
-    }
-    .section-body {
-        font-size: 1.25rem !important;
-        max-width: 700px;
-        margin: 0 auto;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        text-align: center;
-    }
-    section {
-        padding-top: 6rem !important;
-        padding-bottom: 2rem !important;
-    }
-    .footer-content {
-        padding: 2rem 1rem;
-    }
-    .footer-content p {
-        font-size: 1.1rem;
-        line-height: 1.5;
+        background: url('images/Hero Section Image Mobile.png') center center/cover no-repeat;
     }
 }
 
 /* Modern Mission Section */
 .mission-modern {
+    background: url('images/For What We Carry Desktop.png') center center/cover no-repeat;
+    min-height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
-    padding: 0 1.5rem;
-    gap: 1.25rem;
+    padding: 0 3rem;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+    z-index: 1;
+}
+
+.mission-modern-title,
+.mission-modern-text {
+    position: relative;
+    z-index: 2;
+    color: #fffcf1;
 }
 
 .mission-modern-title {
@@ -426,63 +325,62 @@ section#about,
     font-size: 2.7rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #222;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    position: relative;
+    margin: 0 0 2rem 0;
     background: none;
     text-transform: none;
     text-align: center;
+    line-height: 1.2;
+    padding: 0 1rem;
 }
 
 .mission-modern-text {
     font-size: 1.35rem;
-    color: #000000;
     font-weight: 700;
     line-height: 1.7;
     text-align: center;
-    margin: 0 auto 0 auto;
-    max-width: 600px;
+    margin: 0 auto;
+    max-width: 700px;
     padding: 0 1rem;
+    font-family: 'DM Sans', sans-serif;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
     .mission-modern {
-        min-height: 70vh;
-        padding: 0 2rem;
-        gap: 1.1rem;
+        background: url('images/For What We Carry Tablet.png') center center/cover no-repeat;
+        padding: 2rem 1.5rem;
+    }
+    .mission-modern-title,
+    .mission-modern-text {
+        color: #fffcf1;
     }
     .mission-modern-title {
-        font-size: 2.4rem;
-        padding: 0 1rem;
+        font-size: 2.2rem;
     }
     .mission-modern-text {
-        font-size: 1.2rem;
-        max-width: 90%;
-        padding: 0 1.5rem;
-        line-height: 1.6;
+        font-size: 1.1rem;
+        max-width: 95vw;
     }
 }
 
 @media (max-width: 600px) {
     .mission-modern {
-        min-height: 60vh;
-        padding: 0 1rem;
-        gap: 1rem;
-        margin-bottom: 0;
+        background: url('images/For What We Carry Mobile.png') center center/cover no-repeat;
+        padding: 1.5rem 1rem;
+        min-height: 80vh;
+    }
+    .mission-modern-title,
+    .mission-modern-text {
+        color: #fffcf1;
     }
     .mission-modern-title {
-        font-size: 2rem;
-        padding: 0 0.5rem;
+        font-size: 1.5rem;
     }
     .mission-modern-text {
-        font-size: 1.1rem;
-        max-width: 85%;
-        padding: 0 1rem;
-        line-height: 1.5;
-        margin-bottom: 3rem;
+        font-size: 1rem;
+        max-width: 98vw;
     }
 }
 
@@ -850,7 +748,7 @@ footer {
     padding: 0;
     background: url('images/The-Heart-Room Section.png') center center/cover no-repeat;
     position: relative;
-    margin-bottom: 0 !important;
+    margin-top: 0 !important;
 }
 
 .feature-above-door {
@@ -1394,4 +1292,381 @@ h1, h2, h3, h4, h5, h6, .logo-text, .center-logo, .nav-links a[href="info.html"]
     font-weight: 400;
     font-style: normal;
     font-display: block;
+}
+
+/* Standardized text styles for mobile and tablet */
+@media (max-width: 900px) {
+    /* Tablet styles */
+    .hero .subtitle {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        color: #000000;
+    }
+
+    .hero h1,
+    .mission-modern-title,
+    .feature-title h2,
+    .section-heading {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        font-family: 'Anton', sans-serif;
+        font-weight: 700;
+        text-transform: none !important;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Mobile styles */
+    .hero .subtitle {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        color: #000000;
+    }
+
+    .hero h1,
+    .mission-modern-title,
+    .feature-title h2,
+    .section-heading {
+        font-size: 2rem;
+        line-height: 1.2;
+        font-family: 'Anton', sans-serif;
+        font-weight: 700;
+        text-transform: none !important;
+        letter-spacing: 1px;
+    }
+}
+
+/* Newsletter Section */
+.newsletter-subtext {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0.5rem auto 1.5rem auto;
+    line-height: 1.5;
+    font-weight: 500;
+    max-width: 500px;
+}
+
+/* Remove all other .hero .subtitle styles */
+.hero .subtitle {
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 500 !important;
+    color: var(--accent-text) !important;
+}
+
+/* Modal Popup Styles */
+.modal-popup {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans', 'Anton', sans-serif;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    padding: 3.5rem 4rem;
+    max-width: 99vw;
+    width: 100%;
+    min-width: 320px;
+    max-width: 580px;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.modal-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.modal-subtext {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-weight: 500;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #c10016;
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 10;
+    line-height: 1;
+    padding: 0;
+}
+
+.modal-close:hover {
+    color: #a20013;
+}
+
+/* Form Styles */
+.popup-form .form-group,
+.signup-form .form-group {
+    margin-bottom: 0.4rem;
+}
+
+.popup-form .form-group:last-child,
+.signup-form .form-group:last-child {
+    margin-bottom: 0;
+}
+
+.popup-form .btn,
+.signup-form .btn {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.form-success {
+    display: none;
+    margin-top: 1rem;
+    color: #4CAF50;
+    text-align: center;
+}
+
+/* Mobile Break Styles */
+.mobile-break {
+    display: inline;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .mobile-break {
+        display: block;
+        margin-top: 0.05rem;
+    }
+    
+    .mission-modern {
+        padding: 2rem 1.5rem;
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem;
+        line-height: 1.1;
+        margin-bottom: 1.2rem;
+        font-family: 'Anton', sans-serif;
+        text-transform: none;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.2rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1.2rem !important;
+        font-weight: 700 !important;
+    }
+    
+    .mission-modern-title {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        font-family: 'Anton', sans-serif;
+        text-transform: none !important;
+    }
+    
+    .mission-modern-text {
+        font-size: 1.3rem;
+        line-height: 1.4;
+        padding: 0 0.25rem;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+    }
+    
+    .newsletter-subtext {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+    
+    .modal-subtext {
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+    
+    .popup-form .form-group,
+    .signup-form .form-group {
+        margin-bottom: 0.3rem;
+    }
+    
+    .popup-form .btn,
+    .signup-form .btn {
+        margin-top: 0.8rem;
+        margin-bottom: 0.4rem;
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .mission-modern {
+        padding: 1.5rem 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        font-family: 'Anton', sans-serif;
+        text-transform: none;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.3rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 1rem !important;
+        font-weight: 500 !important;
+    }
+    
+    .mission-modern-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1.2rem;
+        font-family: 'Anton', sans-serif;
+        text-transform: none !important;
+    }
+    
+    .mission-modern-text {
+        font-size: 1.3rem;
+        line-height: 1.4;
+        padding: 0 0.25rem;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+    }
+    
+    .newsletter-subtext {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+    
+    .modal-subtext {
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+    
+    .popup-form .form-group,
+    .signup-form .form-group {
+        margin-bottom: 0.2rem;
+    }
+    
+    .popup-form .btn,
+    .signup-form .btn {
+        margin-top: 0.7rem;
+        margin-bottom: 0.3rem;
+        padding: 0.8rem;
+        font-size: 0.98rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .modal-content {
+        max-width: 700px;
+    }
+    
+    .modal-title {
+        font-size: 2.2rem;
+        white-space: nowrap;
+        letter-spacing: 0.5px;
+    }
+    
+    .modal-subtext {
+        font-size: 1.3rem;
+    }
+}
+
+/* --- Refined Scrolling Quotes Bar for Seamless Overlap --- */
+.scrolling-quotes-bar {
+  position: relative;
+  top: -1.2rem; /* overlap the previous section */
+  margin-bottom: -1.2rem; /* pull up the next section */
+  background: rgba(255,252,241,0.97);
+  padding: 0.15rem 0;
+  font-size: 1.05rem;
+  z-index: 2;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 2px 12px rgba(193,0,22,0.06);
+  border-top: 2px solid #c10016;
+  border-bottom: 2px solid #c10016;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.scrolling-quotes-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: marquee-scroll 38s linear infinite;
+}
+
+.scrolling-quote {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #c10016;
+  margin: 0 2rem;
+  letter-spacing: 1.5px;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0.1rem 0;
+  opacity: 0.95;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+/* Duplicate the quotes for seamless infinite scroll */
+.scrolling-quotes-track {
+  will-change: transform;
+}
+.scrolling-quotes-track {
+  min-width: 200%;
+}
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .scrolling-quotes-bar {
+    font-size: 0.95rem;
+    top: -0.7rem;
+    margin-bottom: -0.7rem;
+    padding: 0.10rem 0;
+    border-radius: 0 0 12px 12px;
+  }
+}
+@media (max-width: 600px) {
+  .scrolling-quotes-bar {
+    font-size: 0.85rem;
+    top: -0.4rem;
+    margin-bottom: -0.4rem;
+    padding: 0.07rem 0;
+    border-radius: 0 0 8px 8px;
+  }
 } 

@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="container">
-            <nav class="nav-centered" style="position:relative;">
+            <nav class="nav-centered">
                 <button class="hamburger" aria-label="Open menu" onclick="openMenu()">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -45,7 +45,7 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>YOUR HEART MATTERS</h1>
-                    <p class="subtitle">Come heal, grow, and feel seen</p>
+                    <p class="subtitle">Feel it. Say it. Let it out.</p>
                     <a href="theheartroom.html" class="btn btn-primary">Step Inside</a>
                 </div>
                 <div class="hero-image">
@@ -56,10 +56,32 @@
 
         <section id="about" class="mission-modern">
             <h2 class="mission-modern-title">
-              <span class="highlight">FOR WHAT YOU CARRY</span>
+              <span class="highlight">For Everything You Carry</span>
             </h2>
-            <p class="mission-modern-text">Heart Matters is a safe place to be honest, to grow, and to feel less alone. We make room for the feelings and stories we keep inside, avoid, or fear sharing. Whether you're facing heartbreak, grief, trauma, healing, or change, your story matters here. Because healing begins when we stop holding it in and start feeling it together.</p>
+            <p class="mission-modern-text">Feelings we keep in. Stories we carry. Truths we've never said out loud.  Heart Matters helps you carry less and feel more. We turn what you hold inside into something you can wear, say, or share. Because healing begins with honesty, and connection begins with reflection.</p>
         </section>
+
+        <!-- BEGIN: Horizontal Scrolling Quotes Bar -->
+        <div class="scrolling-quotes-bar">
+          <div class="scrolling-quotes-track">
+            <span class="scrolling-quote">I STILL CARRY THINGS I'VE NEVER SAID OUT LOUD.</span>
+            <span class="scrolling-quote">I'M LEARNING TO FEEL AGAIN.</span>
+            <span class="scrolling-quote">I WANT TO BE SEEN FOR WHO I AM.</span>
+            <span class="scrolling-quote">I DON'T WANT TO HIDE ANYMORE.</span>
+            <span class="scrolling-quote">I'M STILL HEALING.</span>
+            <span class="scrolling-quote">I'M NOT ALONE.</span>
+            <span class="scrolling-quote">I'M ALLOWED TO FEEL THIS.</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="scrolling-quote">I STILL CARRY THINGS I'VE NEVER SAID OUT LOUD.</span>
+            <span class="scrolling-quote">I'M LEARNING TO FEEL AGAIN.</span>
+            <span class="scrolling-quote">I WANT TO BE SEEN FOR WHO I AM.</span>
+            <span class="scrolling-quote">I DON'T WANT TO HIDE ANYMORE.</span>
+            <span class="scrolling-quote">I'M STILL HEALING.</span>
+            <span class="scrolling-quote">I'M NOT ALONE.</span>
+            <span class="scrolling-quote">I'M ALLOWED TO FEEL THIS.</span>
+          </div>
+        </div>
+        <!-- END: Horizontal Scrolling Quotes Bar -->
 
         <section id="feature-show" class="feature modern-section">
             <div class="feature-above-door">
@@ -69,7 +91,7 @@
                 <div class="feature-title">
                     <!-- other content here -->
                 </div>
-                <div class="feature-action" style="margin-top: 2rem;">
+                <div class="feature-action">
                     <a href="theheartroom.html" class="btn btn-primary">Enter the room</a>
                 </div>
             </div>
@@ -92,7 +114,8 @@
             </div>
             
             <div class="newsletter">
-                <h3>SIGN UP FOR UPDATES AND MERCH DROPS AND MORE</h3>
+                <h3>WANT TO BE PART OF THE MOVEMENT?</h3>
+                <p class="newsletter-subtext">Get drops, stories, and reminders that speak to your heart.</p>
                 <form class="signup-form" id="signupForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdMfNDBBsnuE2Q1_Gn57Y_FJmpWTw0h00bTStNd5Bju07mTKA/formResponse" method="POST" target="hidden-iframe">
                     <div class="form-group">
                         <input type="email" name="entry.649844771" placeholder="Email" required>
@@ -100,12 +123,10 @@
                     <div class="form-group">
                         <input type="tel" name="entry.673635167" placeholder="Phone (optional)">
                     </div>
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                    <button type="submit" class="btn btn-primary">Join Us</button>
                 </form>
                 <iframe name="hidden-iframe" style="display:none;"></iframe>
-                <div id="form-success" style="display: none; margin-top: 1rem; color: #4CAF50; text-align: center;">
-                    Thank you for signing up!
-                </div>
+                <div id="form-success" class="form-success">Thank you for signing up!</div>
             </div>
             
             <div class="copyright">
@@ -113,10 +134,12 @@
             </div>
         </div>
     </footer>
-    <div id="signup-popup" class="modal-popup" style="display:none;">
+
+    <div id="signup-popup" class="modal-popup">
         <div class="modal-content">
             <button class="modal-close" aria-label="Close popup" onclick="closePopup()">&times;</button>
-            <h3 class="modal-title">SIGN UP FOR UPDATES AND MERCH DROPS AND MORE</h3>
+            <h3 class="modal-title">WANT TO BE PART OF THE MOVEMENT?</h3>
+            <p class="modal-subtext">Get drops, stories, and reminders that speak to your heart.</p>
             <form class="signup-form popup-form" id="popupSignupForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdMfNDBBsnuE2Q1_Gn57Y_FJmpWTw0h00bTStNd5Bju07mTKA/formResponse" method="POST" target="hidden-iframe">
                 <div class="form-group">
                     <input type="email" name="entry.649844771" placeholder="Email" required>
@@ -124,77 +147,12 @@
                 <div class="form-group">
                     <input type="tel" name="entry.673635167" placeholder="Phone (optional)">
                 </div>
-                <button type="submit" class="btn btn-primary">Sign Up</button>
+                <button type="submit" class="btn btn-primary">Join Us</button>
             </form>
-            <div id="popup-form-success" style="display: none; margin-top: 1rem; color: #4CAF50; text-align: center;">
-                Thank you for signing up!
-            </div>
+            <div id="popup-form-success" class="form-success">Thank you for signing up!</div>
         </div>
     </div>
-    <style>
-    .modal-popup {
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(0,0,0,0.45);
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'DM Sans', 'Anton', sans-serif;
-    }
-    .modal-content {
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-        padding: 2.5rem 2.5rem 2.5rem 2.5rem;
-        max-width: 99vw;
-        width: 100%;
-        min-width: 320px;
-        max-width: 440px;
-        position: relative;
-        text-align: center;
-        box-sizing: border-box;
-    }
-    .modal-title {
-        font-family: 'Anton', sans-serif;
-        font-size: 1.3rem;
-        color: #000000;
-        margin-bottom: 1.5rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-    .modal-close {
-        position: absolute;
-        top: 0.7rem;
-        right: 0.7rem;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: #c10016;
-        cursor: pointer;
-        transition: color 0.2s;
-        z-index: 10;
-        line-height: 1;
-        padding: 0;
-    }
-    .modal-close:hover {
-        color: #a20013;
-    }
-    .popup-form .btn {
-        width: 100%;
-        margin-top: 0.5rem;
-    }
-    @media (max-width: 600px) {
-        .modal-content {
-            padding: 2.5rem 0.7rem 2rem 0.7rem;
-            max-width: 99vw;
-            min-width: 0;
-        }
-        .modal-title {
-            font-size: 1.05rem;
-        }
-    }
-    </style>
+
     <script>
     // Popup logic
     function closePopup() {
@@ -204,11 +162,14 @@
         expire.setDate(expire.getDate() + 30);
         localStorage.setItem('hm_popup_closed', expire.getTime());
     }
+
     function shouldShowPopup() {
         var closedUntil = localStorage.getItem('hm_popup_closed');
         if (!closedUntil) return true;
         return new Date().getTime() > parseInt(closedUntil);
     }
+
+    // Show popup after page load
     window.addEventListener('DOMContentLoaded', function() {
         if (shouldShowPopup()) {
             setTimeout(function() {
@@ -216,6 +177,7 @@
             }, 5000); // Show after 5 seconds
         }
     });
+
     // Popup form submission
     document.getElementById('popupSignupForm').addEventListener('submit', function(e) {
         var form = this;
@@ -225,7 +187,7 @@
         setTimeout(function() {
             form.reset();
             submitButton.disabled = false;
-            submitButton.textContent = 'Sign Up';
+            submitButton.textContent = 'Join Us';
             document.getElementById('popup-form-success').style.display = 'block';
             setTimeout(function() {
                 document.getElementById('popup-form-success').style.display = 'none';
@@ -233,6 +195,7 @@
             }, 2500);
         }, 1200);
     });
+
     // Existing footer form logic
     document.getElementById('signupForm').addEventListener('submit', function(e) {
         var form = this;
@@ -242,17 +205,19 @@
         setTimeout(function() {
             form.reset();
             submitButton.disabled = false;
-            submitButton.textContent = 'Sign Up';
+            submitButton.textContent = 'Join Us';
             document.getElementById('form-success').style.display = 'block';
             setTimeout(function() {
                 document.getElementById('form-success').style.display = 'none';
             }, 5000);
         }, 1200);
     });
+
     function openMenu() {
         document.getElementById('menuOverlay').classList.add('open');
         document.body.style.overflow = 'hidden';
     }
+
     function closeMenu() {
         document.getElementById('menuOverlay').classList.remove('open');
         document.body.style.overflow = '';
