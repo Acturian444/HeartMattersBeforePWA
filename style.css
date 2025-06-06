@@ -1606,12 +1606,11 @@ h1, h2, h3, h4, h5, h6, .logo-text, .center-logo, .nav-links a[href="info.html"]
   position: relative;
   top: -1.2rem; /* overlap the previous section */
   margin-bottom: -1.2rem; /* pull up the next section */
-  background: rgba(255,252,241,0.97);
-  padding: 0.15rem 0;
+  background: #fffcf1;
+  padding: 0.3rem 0;
   font-size: 1.05rem;
-  z-index: 2;
-  border-radius: 0 0 18px 18px;
-  box-shadow: 0 2px 12px rgba(193,0,22,0.06);
+  z-index: 10;
+  border-radius: 0;
   border-top: 2px solid #c10016;
   border-bottom: 2px solid #c10016;
   width: 100vw;
