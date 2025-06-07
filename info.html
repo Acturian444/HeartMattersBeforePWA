@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#fffcf1">
-    <title>Contact Us - Heart Matters</title>
-    <meta name="description" content="Contact Heart Matters - Get in touch with us">
+    <title>Join The Movement - Heart Matters</title>
+    <meta name="description" content="Join the Heart Matters movement - Learn more and get involved">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" as="style">
@@ -174,7 +174,7 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <ul class="nav-links nav-left">
-                    <li><a href="info.html" class="active">INFO</a></li>
+                    <li><a href="info.html" class="active">JOIN THE MOVEMENT</a></li>
                     <li><a href="https://tally.so/r/mVypp6" target="_blank">SHARE YOUR STORY</a></li>
                 </ul>
                 <a href="index.html" class="logo-text center-logo">Heart Matters</a>
@@ -186,7 +186,7 @@
         <div class="menu-overlay" id="menuOverlay">
             <button class="close-btn" aria-label="Close menu" onclick="closeMenu()">&times;</button>
             <nav>
-                <a href="info.html">INFO</a>
+                <a href="info.html">JOIN THE MOVEMENT</a>
                 <a href="theheartroom.html">THE HEART ROOM</a>
                 <a href="https://tally.so/r/mVypp6" target="_blank" rel="noopener">SHARE YOUR STORY</a>
             </nav>
@@ -194,6 +194,132 @@
     </header>
 
     <main>
+        <section style="min-height: 100vh; background-color: #fffcf1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 6rem 2rem; margin-bottom: 0;">
+            <h1 style="font-family: 'Anton', sans-serif; font-size: 3.5rem; color: #c10016; text-align: center; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; line-height: 1.2;">
+                What We're Building Together
+            </h1>
+            <p class="subtitle-movement">
+                This is more than a brand. It's a movement to carry less, heal out loud and connect through what's real.
+            </p>
+            <div style="max-width: 800px; margin: 0 auto; font-family: 'DM Sans', sans-serif; font-size: 1.25rem; color: #000; line-height: 1.8; text-align: center;">
+                <p style="margin-bottom: 2rem;">
+                    Too many of us have been told to hide our pain, silence our feelings, and pretend we're okay.
+                </p>
+                <p style="margin-bottom: 2rem;">
+                    We live in a culture that tells us to stay polished, stay positive, and just keep it together. But that pressure leads to real pain—addiction, isolation, anxiety, depression, and disconnection.
+                </p>
+                <p style="margin-bottom: 2rem;">
+                    It weighs us down and keeps us apart.
+                </p>
+                <p style="margin-bottom: 2rem;">
+                    Here, you don't have to pretend. Every feeling—anger, sadness, hope, or fear—is welcome. Every emotion deserves to be felt and released.
+                </p>
+                <p style="margin-bottom: 2rem;">
+                    We're done pretending. We're done carrying pain in silence. We're done hiding behind smiles.
+                </p>
+                <p style="margin-bottom: 2rem;">
+                    This isn't about fixing you. It's about being honest, together.
+                </p>
+                <p style="margin-bottom: 2rem;">
+                    If you've ever felt too much, not enough, or alone with your story—you belong here.
+                </p>
+                <p style="font-weight: 600;">
+                    If something in you is ready to stop pretending… if you're tired of carrying so much in silence… you're not alone.<br>
+                    Sign your name to affirm: your heart matters, your truth matters, and you're ready to feel it, say it, and let it out—together.
+                </p>
+                <div style="margin-top: 2rem;">
+                    <button class="btn btn-primary" style="font-size: 1.1rem; padding: 0.8rem 2rem; border-radius: 4px; font-weight: 600; background: #c10016; color: #fff;" onclick="openPledgePopup()">Sign the Pledge</button>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            @media (max-width: 768px) {
+                section {
+                    padding: 4rem 1.5rem !important;
+                }
+                h1 {
+                    font-size: 2.5rem !important;
+                    padding: 0 1rem !important;
+                }
+                p[style*="font-family: 'DM Sans'"] {
+                    font-size: 1.2rem !important;
+                    padding: 0 1rem !important;
+                    margin-bottom: 3rem !important;
+                }
+                div[style*="max-width: 800px"] {
+                    font-size: 1.1rem !important;
+                    padding: 0 0.5rem !important;
+                    text-align: center !important;
+                }
+                div[style*="max-width: 800px"] p {
+                    margin-bottom: 1.5rem !important;
+                }
+            }
+            @media (max-width: 480px) {
+                section {
+                    padding: 3rem 1rem !important;
+                }
+                h1 {
+                    font-size: 2rem !important;
+                    padding: 0 0.5rem !important;
+                }
+                p[style*="font-family: 'DM Sans'"] {
+                    font-size: 1.1rem !important;
+                    padding: 0 0.5rem !important;
+                    margin-bottom: 2.5rem !important;
+                }
+                div[style*="max-width: 800px"] {
+                    font-size: 1rem !important;
+                    padding: 0 !important;
+                    text-align: center !important;
+                }
+                div[style*="max-width: 800px"] p {
+                    margin-bottom: 1.25rem !important;
+                }
+            }
+            .subtitle-movement {
+                font-family: 'DM Sans', sans-serif;
+                font-weight: 700;
+                color: #000;
+                text-align: center;
+                margin-bottom: 4rem;
+                line-height: 1.7;
+                font-size: 1.35rem;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                word-break: break-word;
+            }
+            @media (max-width: 900px) {
+                .subtitle-movement {
+                    font-size: 1.1rem;
+                    margin-bottom: 3rem;
+                    padding: 0 1rem;
+                    max-width: 95vw;
+                }
+            }
+            @media (max-width: 600px) {
+                .subtitle-movement {
+                    font-size: 1rem;
+                    margin-bottom: 2rem;
+                    padding: 0 0.5rem;
+                    max-width: 99vw;
+                }
+            }
+        </style>
+
+        <section style="min-height: 60vh; background-color: #c10016; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 4rem 2rem; margin-bottom: 0;">
+            <h2 style="font-family: 'Anton', sans-serif; font-size: 2.5rem; color: #fffcf1; text-align: center; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px;">
+                WHAT YOU CARRY CONNECTS US
+            </h2>
+            <p style="font-family: 'DM Sans', sans-serif; font-size: 1.25rem; color: #fffcf1; text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.7;">
+                Every story, every feeling, every truth you carry is a thread in the tapestry of human connection. We're here to create a space where these threads can be woven together—where vulnerability becomes strength, and shared experiences become bridges.<br><br>
+                Your story matters. Your feelings are valid. Your truth deserves to be heard.<br><br>
+                This is more than a community. This is a movement of hearts finding their voice.
+            </p>
+        </section>
+
         <section class="contact-section">
             <div class="contact-content">
                 <h1 class="contact-title">Contact Us</h1>
@@ -229,6 +355,37 @@
             <p style="text-align: center;">&copy; 2025 Heart Matters. All rights reserved.</p>
         </div>
     </footer>
+    <div id="pledge-popup" class="modal-popup" style="display:none;">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close popup" onclick="closePledgePopup()">&times;</button>
+            <h3 class="modal-title">You're not alone in what you carry</h3>
+            <p class="modal-subtext">Sign the pledge to stop pretending, speak your truth, and carry less together. We'll send honest reminders, community updates, and early access to the next drop.</p>
+            <form class="signup-form pledge-form" id="pledgeSignupForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdMfNDBBsnuE2Q1_Gn57Y_FJmpWTw0h00bTStNd5Bju07mTKA/formResponse" method="POST" target="hidden-iframe">
+                <div class="form-group">
+                    <input type="email" name="entry.649844771" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="entry.673635167" placeholder="Phone (optional)">
+                </div>
+                <button type="submit" class="btn btn-primary">Sign the Pledge</button>
+            </form>
+            <div id="pledge-form-success" class="form-success" style="display:none; text-align:center; padding:2.5rem 1rem; background:none; box-shadow:none;">
+              <div style="font-family:'Anton',sans-serif; color:#c10016; font-size:2rem; font-weight:700; margin-bottom:1.5rem;">
+                You're in.
+              </div>
+              <div style="font-family:'DM Sans',sans-serif; color:#000; font-size:1.15rem; font-weight:500; margin-bottom:1.5rem;">
+                You don't have to carry it alone anymore.<br>
+                Check your inbox soon—we'll stay connected.
+              </div>
+              <div style="font-family:'DM Sans',sans-serif; color:#c10016; font-size:1.1rem; margin-bottom:1.2rem;">
+                Your heart matters. Feel it. Say it. Let it out.
+              </div>
+              <div style="font-family:'DM Sans',sans-serif; color:#000; font-size:1.1rem; font-style:italic;">
+                You've been heard.
+              </div>
+            </div>
+        </div>
+    </div>
     <script>
     function openMenu() {
       document.getElementById('menuOverlay').classList.add('open');
@@ -238,6 +395,28 @@
       document.getElementById('menuOverlay').classList.remove('open');
       document.body.style.overflow = '';
     }
+    function openPledgePopup() {
+      document.getElementById('pledge-popup').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    function closePledgePopup() {
+      document.getElementById('pledge-popup').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    document.getElementById('pledgeSignupForm').addEventListener('submit', function(e) {
+      var form = this;
+      var submitButton = form.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      submitButton.textContent = 'Submitting...';
+      setTimeout(function() {
+        // Hide form and other content, show only the full confirmation message
+        form.style.display = 'none';
+        document.querySelector('.modal-title').style.display = 'none';
+        document.querySelector('.modal-subtext').style.display = 'none';
+        document.getElementById('pledge-form-success').style.display = 'block';
+        // No auto-close; user must click close button
+      }, 1200);
+    });
     </script>
 </body>
 </html> 
