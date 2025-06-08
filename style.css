@@ -629,6 +629,12 @@ footer {
     min-width: 160px;
 }
 
+@media (min-width: 601px) and (max-width: 900px) {
+    .feature-action {
+        margin-top: 3.5rem !important;
+    }
+}
+
 @media (max-width: 900px) {
     .mission-grid, .feature-grid {
         grid-template-columns: 1fr;

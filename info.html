@@ -164,6 +164,39 @@
             font-family: 'Anton', sans-serif;
             /* color: #c10016; */
         }
+
+        .movement-body-text {
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.25rem;
+            color: #000;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .movement-body-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .movement-body-text {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+                max-width: 95vw;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .movement-body-text {
+                font-size: 1rem;
+                padding: 0 0.5rem;
+                max-width: 99vw;
+            }
+            .movement-body-text p {
+                margin-bottom: 1.1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -195,41 +228,31 @@
 
     <main>
         <section style="min-height: 100vh; background-color: #fffcf1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 6rem 2rem; margin-bottom: 0;">
-            <h1 style="font-family: 'Anton', sans-serif; font-size: 3.5rem; color: #c10016; text-align: center; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; line-height: 1.2;">
+            <h1 class="main-title-mobile-one-line" style="font-family: 'Anton', sans-serif; font-size: 3.5rem; color: #c10016; text-align: center; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; line-height: 1.2;">
                 What We're Building Together
             </h1>
-            <p class="subtitle-movement">
-                This is more than a brand. It's a movement to carry less, heal out loud and connect through what's real.
+            <p class="subtitle-movement" style="font-family: 'DM Sans', sans-serif; font-weight: 700; color: #000; text-align: center; margin: 0.5rem auto 2.5rem auto; line-height: 1.7; font-size: 1.5rem; max-width: 700px;">
+                A space to carry less, feel more, and heal together.
             </p>
-            <div style="max-width: 800px; margin: 0 auto; font-family: 'DM Sans', sans-serif; font-size: 1.25rem; color: #000; line-height: 1.8; text-align: center;">
-                <p style="margin-bottom: 2rem;">
-                    Too many of us have been told to hide our pain, silence our feelings, and pretend we're okay.
+            <div class="movement-body-text" style="max-width: 800px; margin: 0 auto; font-family: 'DM Sans', sans-serif; font-size: 1.25rem; color: #000; line-height: 1.8; text-align: center;">
+                <p>
+                  We carry so much—shame we never deserved, grief we never spoke, fear we buried, heartbreak we never healed, anger we swallowed. Feelings we've had to hide just to survive.
                 </p>
-                <p style="margin-bottom: 2rem;">
-                    We live in a culture that tells us to stay polished, stay positive, and just keep it together. But that pressure leads to real pain—addiction, isolation, anxiety, depression, and disconnection.
+                <p>
+                  We've been told to be strong, stay quiet, keep it together. But that silence? It sinks into our bones. It sits heavy in your chest—and over time, it starts to hurt. We try to suppress it, ignore it, numb it—but it doesn't go away. It turns into something deeper: addiction, isolation, anxiety, depression, disconnection. It pulls us away from ourselves—and from each other.
                 </p>
-                <p style="margin-bottom: 2rem;">
-                    It weighs us down and keeps us apart.
+                <p>
+                  For anyone tired of pretending they're fine—this is your space. A place to be real, feel seen, and heal. Say what's been unsaid. Let go of what's been buried. You don't have to carry it alone.
                 </p>
-                <p style="margin-bottom: 2rem;">
-                    Here, you don't have to pretend. Every feeling—anger, sadness, hope, or fear—is welcome. Every emotion deserves to be felt and released.
+                <p>
+                  You don't have to fix it. You don't have to filter it. You just have to feel it, say it, and let it out—together.
                 </p>
-                <p style="margin-bottom: 2rem;">
-                    We're done pretending. We're done carrying pain in silence. We're done hiding behind smiles.
+                <p>
+                  This is where healing begins. You're not alone. Your story matters. Your heart matters.
                 </p>
-                <p style="margin-bottom: 2rem;">
-                    This isn't about fixing you. It's about being honest, together.
-                </p>
-                <p style="margin-bottom: 2rem;">
-                    If you've ever felt too much, not enough, or alone with your story—you belong here.
-                </p>
-                <p style="font-weight: 600;">
-                    If something in you is ready to stop pretending… if you're tired of carrying so much in silence… you're not alone.<br>
-                    Sign your name to affirm: your heart matters, your truth matters, and you're ready to feel it, say it, and let it out—together.
-                </p>
-                <div style="margin-top: 2rem;">
-                    <button class="btn btn-primary" style="font-size: 1.1rem; padding: 0.8rem 2rem; border-radius: 4px; font-weight: 600; background: #c10016; color: #fff;" onclick="openPledgePopup()">Sign the Pledge</button>
-                </div>
+            </div>
+            <div style="margin-top: 2rem;">
+                <button class="btn btn-primary" style="font-size: 1.1rem; padding: 0.8rem 2rem; border-radius: 4px; font-weight: 600; background: #000000; color: #fff;" onclick="openPledgePopup()">Sign the Pledge</button>
             </div>
         </section>
 
@@ -293,16 +316,16 @@
             }
             @media (max-width: 900px) {
                 .subtitle-movement {
-                    font-size: 1.1rem;
-                    margin-bottom: 3rem;
+                    font-size: 1.2rem !important;
+                    margin: 0.5rem auto 2rem auto !important;
                     padding: 0 1rem;
                     max-width: 95vw;
                 }
             }
             @media (max-width: 600px) {
                 .subtitle-movement {
-                    font-size: 1rem;
-                    margin-bottom: 2rem;
+                    font-size: 1.05rem !important;
+                    margin: 0.5rem auto 1.2rem auto !important;
                     padding: 0 0.5rem;
                     max-width: 99vw;
                 }
