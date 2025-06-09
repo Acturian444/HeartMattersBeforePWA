@@ -439,7 +439,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 1.2rem;
+            margin-bottom: 0.8rem;
         }
         .confirmation-heart svg {
             width: 64px;
@@ -457,7 +457,10 @@
             60% { transform: scale(1); }
         }
         .confirmation-headline {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
             margin-bottom: 1.2rem;
             line-height: 1.1;
@@ -470,7 +473,7 @@
             color: #000;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 0;
+            margin-bottom: 0.25em;
         }
         .headline-line2 {
             display: block;
@@ -481,14 +484,15 @@
             letter-spacing: 1.5px;
             text-transform: uppercase;
             margin-top: 0;
+            margin-bottom: 0.1em;
         }
         @media (max-width: 900px) {
-            .headline-line1 { font-size: 2.1rem; }
-            .headline-line2 { font-size: 1.4rem; }
+            .headline-line1 { font-size: 2.1rem; margin-bottom: 0.18em; }
+            .headline-line2 { font-size: 1.4rem; margin-bottom: 0.12em; }
         }
         @media (max-width: 600px) {
-            .headline-line1 { font-size: 1.2rem; }
-            .headline-line2 { font-size: 0.95rem; }
+            .headline-line1 { font-size: 1.05rem; margin-bottom: 0.13em; }
+            .headline-line2 { font-size: 0.85rem; margin-bottom: 0.09em; }
         }
         .confirmation-message p {
             color: #222;
@@ -530,16 +534,24 @@
                 height: 260px;
             }
             .confirmation-message {
+                min-height: 220px;
                 padding: 2.2rem 0.2rem 2.2rem 0.2rem;
                 max-width: 99vw;
-                min-height: 120px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
-            .confirmation-message h1 {
-                font-size: 1.3rem;
+            .confirmation-headline {
                 margin-bottom: 1.1rem;
             }
-            .confirmation-message p {
-                font-size: 0.98rem;
+            .headline-line1 {
+                font-size: 2.1rem;
+                margin-bottom: 0.12em;
+            }
+            .headline-line2 {
+                font-size: 1.4rem;
+                margin-bottom: 0.18em;
             }
             .confirmation-heart svg {
                 width: 38px;
@@ -562,17 +574,24 @@
                 clip-path: polygon(15% 0%, 85% 0%, 100% 18%, 100% 82%, 85% 100%, 15% 100%, 0% 82%, 0% 18%);
             }
             .confirmation-message {
+                min-height: 120px;
                 padding: 1.2rem 0.7rem;
+                max-width: 99vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .confirmation-headline {
+                margin-bottom: 1rem;
             }
             .headline-line1 {
                 font-size: 1.05rem;
+                margin-bottom: 0.1em;
             }
             .headline-line2 {
                 font-size: 0.85rem;
-            }
-            .confirmation-message p {
-                font-size: 0.92rem;
-                word-break: break-word;
+                margin-bottom: 0.15em;
             }
             .confirmation-heart svg {
                 width: 28px;
@@ -584,6 +603,177 @@
                 clip-path: polygon(18% 0%, 82% 0%, 100% 25%, 100% 75%, 82% 100%, 18% 100%, 0% 75%, 0% 25%);
                 height: 240px;
             }
+        }
+        .start-here-section {
+            background: #fffcf1;
+            padding: 5rem 0 4rem 0;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .start-here-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .start-here-title {
+            font-family: 'Anton', sans-serif;
+            font-size: 2.5rem;
+            color: #000;
+            margin-bottom: 0.7rem;
+            text-align: center;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .start-here-subtext {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.25rem;
+            color: #000;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            font-weight: 600;
+        }
+        .start-here-card-grid {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+            width: 100%;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+        .start-here-card {
+            background: transparent;
+            border: 2px solid #c10016;
+            border-radius: 10px;
+            box-shadow: none;
+            padding: 2.5rem 2rem 2rem 2rem;
+            min-width: 260px;
+            max-width: 340px;
+            flex: 1 1 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            margin-bottom: 0;
+            transition: box-shadow 0.2s, transform 0.2s;
+            height: 100%;
+            min-height: 370px;
+            max-height: 340px;
+            position: relative;
+        }
+        .start-here-card.card-red {
+            background: transparent;
+            color: #000;
+            border: 2px solid #c10016;
+        }
+        .start-here-card.card-red h3,
+        .start-here-card.card-red p {
+            color: #000;
+        }
+        .start-here-card h3 {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .start-here-card p {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.08rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            color: #222;
+        }
+        .start-here-card.card-red p {
+            color: #000 !important;
+        }
+        .start-here-card .btn {
+            margin-top: auto;
+            width: 100%;
+            font-size: 1.08rem;
+            font-family: 'Anton', sans-serif;
+            font-weight: bold;
+            border-radius: 6px;
+            padding: 0.9rem 0;
+            letter-spacing: 0.5px;
+            box-shadow: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 85%;
+        }
+        .start-here-card.card-red .btn {
+            background: #c10016;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+        }
+        .start-here-card.card-red .btn[style*="pointer-events: none"] {
+            background: #c10016;
+            color: #fff;
+            opacity: 0.5;
+        }
+        .start-here-card:hover {
+            box-shadow: 0 8px 48px rgba(193,0,22,0.18), 0 3px 16px rgba(0,0,0,0.10);
+            transform: translateY(-4px) scale(1.03);
+        }
+        @media (max-width: 1100px) {
+            .start-here-content {
+                max-width: 960px;
+            }
+            .start-here-card-grid {
+                gap: 1rem;
+            }
+            .start-here-card {
+                max-width: 280px;
+                padding: 2rem 1rem 2rem 1rem;
+                min-height: 340px;
+            }
+        }
+        @media (min-width: 601px) and (max-width: 900px) {
+            .start-here-card-grid {
+                gap: 1rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .start-here-section {
+                padding: 2.2rem 0 1.5rem 0;
+            }
+            .start-here-title {
+                font-size: 2rem;
+            }
+            .start-here-subtext {
+                font-size: 1.05rem;
+                margin-bottom: 1.5rem;
+            }
+            .start-here-card {
+                max-width: 95vw;
+                min-width: 0;
+                margin-bottom: 0;
+                padding: 1.2rem 0.7rem 2rem 0.7rem;
+                min-height: 300px;
+            }
+            .start-here-card p {
+                margin-bottom: 2.2rem;
+            }
+            .start-here-card .btn {
+                margin-top: 0;
+            }
+        }
+        /* Override for movement-title only */
+        .movement-title {
+            color: #000 !important;
         }
     </style>
 </head>
@@ -729,6 +919,58 @@
             </div>
         </section>
 
+        <!-- Start Here Section -->
+        <section class="start-here-section">
+            <div class="start-here-content">
+                <h2 class="start-here-title">Start Here</h2>
+                <div class="start-here-subtext">Write it. Wear it. Speak it. This is how we begin.</div>
+                <div class="start-here-card-grid">
+                    <!-- Card 1 -->
+                    <div class="start-here-card">
+                        <div class="start-here-icon" aria-hidden="true" style="margin-bottom: 1rem;">
+                          <!-- Pen/Writing Icon -->
+                          <svg width="38" height="38" viewBox="0 0 32 32" fill="none" stroke="#c10016" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 6l4 4L10 26H6v-4L22 6z"/>
+                            <path d="M20 8l4 4"/>
+                          </svg>
+                        </div>
+                        <h3>Confess Anonymously</h3>
+                        <p>Let it out in writing.<br>No names. No pressure.<br>Just your truth.</p>
+                        <a href="https://tally.so/r/mVypp6" target="_blank" class="btn btn-primary">Open Confessional &rarr;</a>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="start-here-card card-red">
+                        <div class="start-here-icon" aria-hidden="true" style="margin-bottom: 1rem;">
+                          <!-- Shopping Bag Icon -->
+                          <svg width="38" height="38" viewBox="0 0 32 32" fill="none" stroke="#c10016" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 10V8a6 6 0 1 1 12 0v2"/>
+                            <rect x="5" y="10" width="22" height="16" rx="3"/>
+                            <path d="M21 16a5 5 0 0 1-10 0"/>
+                          </svg>
+                        </div>
+                        <h3>Shop the Drop</h3>
+                        <p>Wear what you feel.<br>This isn't just merch.<br>It's a mirror.</p>
+                        <a href="#" class="btn btn-primary">Shop Now &rarr;</a>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="start-here-card card-red">
+                        <div class="start-here-icon" aria-hidden="true" style="margin-bottom: 1rem;">
+                          <!-- Microphone Icon -->
+                          <svg width="38" height="38" viewBox="0 0 32 32" fill="none" stroke="#c10016" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="13" y="5" width="6" height="14" rx="3"/>
+                            <path d="M8 15v2a8 8 0 0 0 16 0v-2"/>
+                            <line x1="16" y1="27" x2="16" y2="30"/>
+                            <line x1="12" y1="30" x2="20" y2="30"/>
+                          </svg>
+                        </div>
+                        <h3>The Heart Room</h3>
+                        <p>Live confessional show.<br>Real people. Raw stories.<br>Join us on TikTok Live</p>
+                        <a href="theheartroom.html" class="btn btn-primary">Enter the Room &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="contact-section">
             <div class="contact-content">
                 <h1 class="contact-title">Contact Us</h1>
@@ -789,17 +1031,23 @@
               confirmation.innerHTML = `
                 <div class="octagon-bg"></div>
                 <div class="confirmation-heart">
-                  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M32 58s-1.7-1.3-4.2-3.1C15.2 44.2 6 36.1 6 25.5 6 16.6 13.6 10 22.5 10c4.2 0 8.2 2 10.5 5.2C35.3 12 39.3 10 43.5 10 52.4 10 60 16.6 60 25.5c0 10.6-9.2 18.7-21.8 29.4C33.7 56.7 32 58 32 58z" fill="#c10016" stroke="#fff" stroke-width="3"/>
+                  <svg viewBox="0 0 8 7" width="64" height="56" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+                    <rect x="1" y="1" width="2" height="1" fill="#c10016"/>
+                    <rect x="5" y="1" width="2" height="1" fill="#c10016"/>
+                    <rect x="0" y="2" width="4" height="1" fill="#c10016"/>
+                    <rect x="4" y="2" width="4" height="1" fill="#c10016"/>
+                    <rect x="0" y="3" width="8" height="1" fill="#c10016"/>
+                    <rect x="1" y="4" width="6" height="1" fill="#c10016"/>
+                    <rect x="2" y="5" width="4" height="1" fill="#c10016"/>
+                    <rect x="3" y="6" width="2" height="1" fill="#c10016"/>
                   </svg>
                 </div>
                 <h1 class="confirmation-headline">
-                  <span class="headline-line1">YOU'RE IN.</span><br>
+                  <span class="headline-line1">YOU'RE IN.</span>
                   <span class="headline-line2">YOUR HEART MATTERS HERE.</span>
                 </h1>
                 <p>
-                  You're not alone in what you carry.<br>
-                  You just joined a movement that sees you.<br>
+                  You're part of something real.<br>
                   Check your inbox for what's next.
                 </p>
               `;
