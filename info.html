@@ -197,6 +197,394 @@
                 margin-bottom: 1.1rem;
             }
         }
+
+        .movement-letter-text {
+            max-width: 700px;
+            margin: 0 auto;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.18rem;
+            color: #000;
+            line-height: 1.8;
+            text-align: left;
+            background: none;
+            padding: 0 1.5rem;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .movement-letter-text pre {
+            font-family: inherit;
+            font-size: inherit;
+            color: inherit;
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        @media (max-width: 900px) {
+            .movement-letter-text {
+                font-size: 1.05rem;
+                padding: 0 1rem;
+                max-width: 98vw;
+            }
+        }
+        @media (min-width: 901px) {
+            .main-title-mobile-one-line.left-align-title,
+            .subtitle-movement.left-align-subtitle,
+            .left-align-cta {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding-left: 1.5rem !important;
+                max-width: 700px !important;
+            }
+        }
+        .movement-letter-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding-left: 1.5rem;
+            padding-right: 0;
+        }
+        .movement-title, .pledge-title {
+            font-family: 'Anton', sans-serif;
+            color: #c10016;
+            font-size: 2.5rem;
+            margin-bottom: 1.2rem;
+            text-align: center;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+        .movement-subtitle {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            color: #000;
+            font-size: 1.1rem;
+            text-align: left;
+            margin: 0.3rem 0 1.5rem 0;
+            line-height: 1.6;
+        }
+        .movement-letter-body {
+            font-family: 'DM Sans', sans-serif;
+            color: #000;
+            font-size: 1.18rem;
+            line-height: 1.8;
+            text-align: left;
+        }
+        .movement-letter-body p {
+            margin-bottom: 1.1rem;
+        }
+        .movement-cta {
+            margin-top: 2rem;
+            text-align: left;
+        }
+        .movement-cta .btn-primary {
+            font-size: 1.1rem;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            background: #000000;
+            color: #fff;
+            display: inline-block;
+            margin-left: 0;
+        }
+        @media (max-width: 900px) {
+            .movement-letter-container {
+                max-width: 98vw;
+                padding-left: 1rem;
+            }
+            .movement-title, .pledge-title, .contact-title {
+                font-size: 2rem !important;
+            }
+            .movement-subtitle { font-size: 1rem; }
+            .movement-letter-body { font-size: 1.05rem; }
+        }
+        @media (max-width: 600px) {
+            .movement-letter-container {
+                padding: 0 1rem !important;
+                max-width: 98vw !important;
+                margin: 0 auto !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .movement-title {
+                font-size: 2rem !important;
+                margin-bottom: 1.2rem !important;
+                letter-spacing: 1.5px !important;
+                text-align: center !important;
+            }
+            .movement-letter-body {
+                font-size: 1.13rem !important;
+                line-height: 1.65 !important;
+                text-align: left !important;
+                width: 100%;
+                max-width: 420px;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                display: block !important;
+            }
+            .movement-letter-body p {
+                margin-bottom: 0.7rem !important;
+            }
+            .movement-letter-body p:last-child {
+                margin-bottom: 0 !important;
+            }
+            section[style*='min-height: 100vh'] {
+                padding: 3rem 0.5rem 2rem 0.5rem !important;
+            }
+        }
+        .pledge-form-block input[type="email"]::placeholder {
+            color: #fffcf1;
+            opacity: 0.8;
+        }
+        .pledge-form-block input[type="email"]:focus {
+            border-color: #fff;
+            background: rgba(255,255,255,0.04);
+        }
+        .confirmation-section {
+            background: linear-gradient(180deg, #c10016 0%, #b8001a 100%);
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 7vw 0 7vw 0;
+            overflow: hidden;
+        }
+        .confirmation-section::before, .confirmation-section::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0;
+            height: 80px;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .confirmation-section::before {
+            top: 0;
+            background: linear-gradient(to bottom, rgba(193,0,22,0.95) 60%, rgba(193,0,22,0.0) 100%);
+        }
+        .confirmation-section::after {
+            bottom: 0;
+            background: linear-gradient(to top, rgba(193,0,22,0.95) 60%, rgba(193,0,22,0.0) 100%);
+        }
+        .fade-in-octagon {
+            position: relative;
+            animation: fadeIn 1.2s cubic-bezier(0.4,0,0.2,1);
+            z-index: 2;
+            overflow: visible;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px) scale(0.98); }
+            to { opacity: 1; transform: none; }
+        }
+        .octagon-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 900px;
+            height: 520px;
+            background: linear-gradient(135deg, rgba(255,252,241,0.92) 70%, rgba(255,246,230,0.85) 100%);
+            opacity: 1;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            clip-path: polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
+            box-shadow: 0 24px 96px 0 rgba(193,0,22,0.22), 0 8px 48px 0 rgba(0,0,0,0.13);
+            pointer-events: none;
+            transition: box-shadow 0.4s;
+            filter: blur(2.5px) drop-shadow(0 0 48px #fff6e6);
+            border: 4px solid rgba(193,0,22,0.13);
+            backdrop-filter: blur(18px) saturate(1.2);
+            overflow: hidden;
+        }
+        .octagon-bg::after {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background: linear-gradient(120deg, rgba(255,255,255,0.18) 20%, rgba(255,255,255,0.04) 60%, rgba(255,255,255,0.18) 100%);
+            pointer-events: none;
+            animation: shimmer 3.5s infinite linear;
+            z-index: 2;
+        }
+        @keyframes shimmer {
+            0% { opacity: 0.7; background-position: -400px 0; }
+            50% { opacity: 1; background-position: 400px 0; }
+            100% { opacity: 0.7; background-position: -400px 0; }
+        }
+        .confirmation-message {
+            padding: 5.5rem 2.5rem 4.5rem 2.5rem;
+            text-align: center;
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'DM Sans', sans-serif;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            z-index: 2;
+        }
+        .confirmation-heart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+        .confirmation-heart svg {
+            width: 64px;
+            height: 64px;
+            filter: drop-shadow(0 2px 12px #c10016aa);
+            animation: heartBeat 1.8s infinite;
+        }
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            10% { transform: scale(1.08); }
+            20% { transform: scale(0.96); }
+            30% { transform: scale(1.12); }
+            40% { transform: scale(0.98); }
+            50% { transform: scale(1.06); }
+            60% { transform: scale(1); }
+        }
+        .confirmation-headline {
+            display: block;
+            text-align: center;
+            margin-bottom: 1.2rem;
+            line-height: 1.1;
+        }
+        .headline-line1 {
+            display: block;
+            font-size: 3.3rem;
+            font-family: 'Anton', sans-serif;
+            font-weight: 900;
+            color: #000;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+        .headline-line2 {
+            display: block;
+            font-size: 2.5rem;
+            font-family: 'Anton', sans-serif;
+            font-weight: 900;
+            color: #c10016;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-top: 0;
+        }
+        @media (max-width: 900px) {
+            .headline-line1 { font-size: 2.1rem; }
+            .headline-line2 { font-size: 1.4rem; }
+        }
+        @media (max-width: 600px) {
+            .headline-line1 { font-size: 1.2rem; }
+            .headline-line2 { font-size: 0.95rem; }
+        }
+        .confirmation-message p {
+            color: #222;
+            font-size: 1.55rem;
+            margin-bottom: 0;
+            line-height: 1.9;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.96;
+            letter-spacing: 0.01em;
+        }
+        @media (max-width: 1200px) {
+            .octagon-bg {
+                width: 98vw;
+                height: 400px;
+            }
+            .confirmation-message {
+                padding: 3.5rem 0.5rem 3.5rem 0.5rem;
+                max-width: 99vw;
+                min-height: 220px;
+            }
+            .confirmation-message h1 {
+                font-size: 2.2rem;
+            }
+            .confirmation-message p {
+                font-size: 1.15rem;
+            }
+        }
+        @media (max-width: 900px) {
+            .confirmation-section {
+                padding: 14vw 0 14vw 0;
+                min-height: 100vh;
+            }
+            .octagon-bg {
+                width: 99vw;
+                height: 260px;
+            }
+            .confirmation-message {
+                padding: 2.2rem 0.2rem 2.2rem 0.2rem;
+                max-width: 99vw;
+                min-height: 120px;
+            }
+            .confirmation-message h1 {
+                font-size: 1.3rem;
+                margin-bottom: 1.1rem;
+            }
+            .confirmation-message p {
+                font-size: 0.98rem;
+            }
+            .confirmation-heart svg {
+                width: 38px;
+                height: 38px;
+            }
+            .octagon-bg {
+                /* tablet: rounder, taller */
+                clip-path: polygon(10% 0%, 90% 0%, 100% 18%, 100% 82%, 90% 100%, 10% 100%, 0% 82%, 0% 18%);
+                height: 320px;
+            }
+        }
+        @media (max-width: 600px) {
+            .confirmation-section {
+                padding: 18vw 0 18vw 0;
+                min-height: 100vh;
+            }
+            .octagon-bg {
+                width: 96vw;
+                height: 180px;
+                clip-path: polygon(15% 0%, 85% 0%, 100% 18%, 100% 82%, 85% 100%, 15% 100%, 0% 82%, 0% 18%);
+            }
+            .confirmation-message {
+                padding: 1.2rem 0.7rem;
+            }
+            .headline-line1 {
+                font-size: 1.05rem;
+            }
+            .headline-line2 {
+                font-size: 0.85rem;
+            }
+            .confirmation-message p {
+                font-size: 0.92rem;
+                word-break: break-word;
+            }
+            .confirmation-heart svg {
+                width: 28px;
+                height: 28px;
+                margin-bottom: 0.5rem;
+            }
+            .octagon-bg {
+                /* mobile: even rounder, taller */
+                clip-path: polygon(18% 0%, 82% 0%, 100% 25%, 100% 75%, 82% 100%, 18% 100%, 0% 75%, 0% 25%);
+                height: 240px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -228,31 +616,16 @@
 
     <main>
         <section style="min-height: 100vh; background-color: #fffcf1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 6rem 2rem; margin-bottom: 0;">
-            <h1 class="main-title-mobile-one-line" style="font-family: 'Anton', sans-serif; font-size: 3.5rem; color: #c10016; text-align: center; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; line-height: 1.2;">
-                What We're Building Together
-            </h1>
-            <p class="subtitle-movement" style="font-family: 'DM Sans', sans-serif; font-weight: 700; color: #000; text-align: center; margin: 0.5rem auto 2.5rem auto; line-height: 1.7; font-size: 1.5rem; max-width: 700px;">
-                A space to carry less, feel more, and heal together.
-            </p>
-            <div class="movement-body-text" style="max-width: 800px; margin: 0 auto; font-family: 'DM Sans', sans-serif; font-size: 1.25rem; color: #000; line-height: 1.8; text-align: center;">
-                <p>
-                  We carry so much—shame we never deserved, grief we never spoke, fear we buried, heartbreak we never healed, anger we swallowed. Feelings we've had to hide just to survive.
-                </p>
-                <p>
-                  We've been told to be strong, stay quiet, keep it together. But that silence? It sinks into our bones. It sits heavy in your chest—and over time, it starts to hurt. We try to suppress it, ignore it, numb it—but it doesn't go away. It turns into something deeper: addiction, isolation, anxiety, depression, disconnection. It pulls us away from ourselves—and from each other.
-                </p>
-                <p>
-                  For anyone tired of pretending they're fine—this is your space. A place to be real, feel seen, and heal. Say what's been unsaid. Let go of what's been buried. You don't have to carry it alone.
-                </p>
-                <p>
-                  You don't have to fix it. You don't have to filter it. You just have to feel it, say it, and let it out—together.
-                </p>
-                <p>
-                  This is where healing begins. You're not alone. Your story matters. Your heart matters.
-                </p>
-            </div>
-            <div style="margin-top: 2rem;">
-                <button class="btn btn-primary" style="font-size: 1.1rem; padding: 0.8rem 2rem; border-radius: 4px; font-weight: 600; background: #000000; color: #fff;" onclick="openPledgePopup()">Sign the Pledge</button>
+            <div class="movement-letter-container">
+                <h1 class="movement-title" style="margin-bottom: 1.5rem;">This Is the Movement</h1>
+                <div class="movement-letter-body">
+                    <p>We carry so much. Shame. Grief. Fear. Heartbreak. Anger. Feelings we've had to hide just to survive.</p>
+                    <p>We've been told to stay strong. Stay quiet. But silence weighs heavy—and over time, it starts to hurt. It becomes something else: addiction, anxiety, depression, isolation.</p>
+                    <p>If you're tired of pretending you're fine—this is your space. To speak your truth. To feel seen. To finally let it out.</p>
+                    <p>You don't have to carry it alone. You don't have to fix it to be worthy of healing. You just have to feel it. Say it. Let it out.</p>
+                    <p>This is where healing begins. This is where we remember:</p>
+                    <p>Your voice matters. Your story matters. Your heart matters.</p>
+                </div>
             </div>
         </section>
 
@@ -332,15 +705,28 @@
             }
         </style>
 
-        <section style="min-height: 60vh; background-color: #c10016; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 4rem 2rem; margin-bottom: 0;">
-            <h2 style="font-family: 'Anton', sans-serif; font-size: 2.5rem; color: #fffcf1; text-align: center; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px;">
-                WHAT YOU CARRY CONNECTS US
-            </h2>
-            <p style="font-family: 'DM Sans', sans-serif; font-size: 1.25rem; color: #fffcf1; text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.7;">
-                Every story, every feeling, every truth you carry is a thread in the tapestry of human connection. We're here to create a space where these threads can be woven together—where vulnerability becomes strength, and shared experiences become bridges.<br><br>
-                Your story matters. Your feelings are valid. Your truth deserves to be heard.<br><br>
-                This is more than a community. This is a movement of hearts finding their voice.
-            </p>
+        <section id="sign-the-pledge" style="min-height: 40vh; background-color: #c10016; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 4rem 2rem 2.5rem 2rem; margin-bottom: 0;">
+            <div class="pledge-form-block" style="background: none; box-shadow: none; border-radius: 0; padding: 0; max-width: 420px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+                <div class="pledge-title" style="font-family: 'Anton', sans-serif; color: #fffcf1; margin-bottom: 1.2rem; text-align: center; letter-spacing: 1px; font-weight: 700; text-transform: uppercase; line-height: 1.1;">THE PLEDGE</div>
+                <div style="font-family: 'DM Sans', sans-serif; color: #fffcf1; font-size: 1.08rem; margin-bottom: 1.5rem; text-align: center; line-height: 1.6; max-width: 420px; padding-left: 0;">
+                    I'm done hiding.<br>
+                    I'm done pretending I'm fine.<br>
+                    I'm done carrying this alone.<br>
+                    My feelings matter. My truth is valid.<br>
+                    I'm letting go of what's been weighing me down.<br>
+                    I'm opening my heart. I'm ready to be seen.<br>
+                    To connect—honestly and fully.<br>
+                    I'm choosing to live—not just survive.<br>
+                    To feel. To heal. To love—starting with me.
+                </div>
+                <form class="signup-form" id="pledgeInlineForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdMfNDBBsnuE2Q1_Gn57Y_FJmpWTw0h00bTStNd5Bju07mTKA/formResponse" method="POST" target="hidden-iframe" style="width: 100%; display: flex; flex-direction: column; gap: 1.1rem; align-items: stretch;">
+                    <input type="email" name="entry.649844771" placeholder="Enter your email..." required style="padding: 0.65rem 1rem; border-radius: 4px; border: 2px solid #fffcf1; background: transparent; color: #fffcf1; font-size: 1.08rem; font-family: 'DM Sans', sans-serif; outline: none; margin-bottom: 0; transition: border-color 0.2s; box-shadow: none; width: 100%;" />
+                    <button type="submit" class="btn btn-primary" style="background: #fffcf1; color: #c10016; padding: 0.65rem 0; border-radius: 4px; font-family: 'Anton', sans-serif; font-size: 1.1rem; font-weight: bold; border: none; margin-bottom: 0; transition: background 0.2s, color 0.2s; box-shadow: none; letter-spacing: 0.5px;">Sign the Pledge &rarr;</button>
+                </form>
+                <div style="font-family: 'DM Sans', sans-serif; color: #fffcf1; font-size: 0.98rem; margin-top: 1.1rem; text-align: center; opacity: 0.85;">We'll send reminders you're not alone and first access to what's next.</div>
+                <iframe name="hidden-iframe" style="display:none;"></iframe>
+                <div id="pledge-inline-success" class="form-success" style="display:none; color: #fffcf1; margin-top: 1.2rem; text-align: center; font-weight: 600;">Thank you for signing the pledge!</div>
+            </div>
         </section>
 
         <section class="contact-section">
@@ -378,37 +764,6 @@
             <p style="text-align: center;">&copy; 2025 Heart Matters. All rights reserved.</p>
         </div>
     </footer>
-    <div id="pledge-popup" class="modal-popup" style="display:none;">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close popup" onclick="closePledgePopup()">&times;</button>
-            <h3 class="modal-title">You're not alone in what you carry</h3>
-            <p class="modal-subtext">Sign the pledge to stop pretending, speak your truth, and carry less together. We'll send honest reminders, community updates, and early access to the next drop.</p>
-            <form class="signup-form pledge-form" id="pledgeSignupForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdMfNDBBsnuE2Q1_Gn57Y_FJmpWTw0h00bTStNd5Bju07mTKA/formResponse" method="POST" target="hidden-iframe">
-                <div class="form-group">
-                    <input type="email" name="entry.649844771" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" name="entry.673635167" placeholder="Phone (optional)">
-                </div>
-                <button type="submit" class="btn btn-primary">Sign the Pledge</button>
-            </form>
-            <div id="pledge-form-success" class="form-success" style="display:none; text-align:center; padding:2.5rem 1rem; background:none; box-shadow:none;">
-              <div style="font-family:'Anton',sans-serif; color:#c10016; font-size:2rem; font-weight:700; margin-bottom:1.5rem;">
-                You're in.
-              </div>
-              <div style="font-family:'DM Sans',sans-serif; color:#000; font-size:1.15rem; font-weight:500; margin-bottom:1.5rem;">
-                You don't have to carry it alone anymore.<br>
-                Check your inbox soon—we'll stay connected.
-              </div>
-              <div style="font-family:'DM Sans',sans-serif; color:#c10016; font-size:1.1rem; margin-bottom:1.2rem;">
-                Your heart matters. Feel it. Say it. Let it out.
-              </div>
-              <div style="font-family:'DM Sans',sans-serif; color:#000; font-size:1.1rem; font-style:italic;">
-                You've been heard.
-              </div>
-            </div>
-        </div>
-    </div>
     <script>
     function openMenu() {
       document.getElementById('menuOverlay').classList.add('open');
@@ -418,27 +773,43 @@
       document.getElementById('menuOverlay').classList.remove('open');
       document.body.style.overflow = '';
     }
-    function openPledgePopup() {
-      document.getElementById('pledge-popup').style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
-    function closePledgePopup() {
-      document.getElementById('pledge-popup').style.display = 'none';
-      document.body.style.overflow = '';
-    }
-    document.getElementById('pledgeSignupForm').addEventListener('submit', function(e) {
-      var form = this;
-      var submitButton = form.querySelector('button[type="submit"]');
-      submitButton.disabled = true;
-      submitButton.textContent = 'Submitting...';
-      setTimeout(function() {
-        // Hide form and other content, show only the full confirmation message
-        form.style.display = 'none';
-        document.querySelector('.modal-title').style.display = 'none';
-        document.querySelector('.modal-subtext').style.display = 'none';
-        document.getElementById('pledge-form-success').style.display = 'block';
-        // No auto-close; user must click close button
-      }, 1200);
+
+    // Pledge form confirmation logic
+    document.addEventListener('DOMContentLoaded', function() {
+      var pledgeForm = document.getElementById('pledgeInlineForm');
+      if (pledgeForm) {
+        pledgeForm.addEventListener('submit', function(e) {
+          // Let the form submit to Google Forms in the hidden iframe
+          setTimeout(function() {
+            var formBlock = pledgeForm.closest('.pledge-form-block');
+            if (formBlock) {
+              // Create confirmation block
+              var confirmation = document.createElement('div');
+              confirmation.className = 'confirmation-message text-center px-6 py-10 fade-in-octagon';
+              confirmation.innerHTML = `
+                <div class="octagon-bg"></div>
+                <div class="confirmation-heart">
+                  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 58s-1.7-1.3-4.2-3.1C15.2 44.2 6 36.1 6 25.5 6 16.6 13.6 10 22.5 10c4.2 0 8.2 2 10.5 5.2C35.3 12 39.3 10 43.5 10 52.4 10 60 16.6 60 25.5c0 10.6-9.2 18.7-21.8 29.4C33.7 56.7 32 58 32 58z" fill="#c10016" stroke="#fff" stroke-width="3"/>
+                  </svg>
+                </div>
+                <h1 class="confirmation-headline">
+                  <span class="headline-line1">YOU'RE IN.</span><br>
+                  <span class="headline-line2">YOUR HEART MATTERS HERE.</span>
+                </h1>
+                <p>
+                  You're not alone in what you carry.<br>
+                  You just joined a movement that sees you.<br>
+                  Check your inbox for what's next.
+                </p>
+              `;
+              formBlock.parentNode.replaceChild(confirmation, formBlock);
+              // Smooth scroll to confirmation
+              confirmation.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }, 900); // Wait for Google Forms to process
+        });
+      }
     });
     </script>
 </body>
