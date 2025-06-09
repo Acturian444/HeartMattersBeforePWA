@@ -18,12 +18,12 @@
             padding: 0;
         }
         .contact-section {
-            min-height: calc(100vh - 120px - 80px); /* header + footer approx heights */
+            min-height: unset;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 6rem 2rem 0 2rem;
+            justify-content: flex-start;
+            padding: 2.5rem 1rem 1.5rem 1rem;
             background-color: #fffcf1;
             margin-bottom: 0;
         }
@@ -37,16 +37,16 @@
 
         .contact-title {
             font-family: 'Anton', sans-serif;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: #000000;
-            margin-bottom: 3rem;
+            margin-bottom: 1.2rem;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .contact-info {
             font-family: 'DM Sans', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: #000000;
             margin-bottom: 2rem;
             line-height: 1.6;
@@ -65,9 +65,9 @@
 
         .social-links-container {
             display: flex;
-            gap: 3rem;
+            gap: 2rem;
             justify-content: center;
-            margin-top: 3rem;
+            margin-top: 1.2rem;
         }
 
         .social-link {
@@ -95,8 +95,8 @@
         }
 
         .whatsapp-group {
-            margin-top: 3rem;
-            padding: 0.6rem 1.2rem;
+            margin-top: 1.2rem;
+            padding: 0.5rem 1rem;
             background-color: #c10016;
             border-radius: 6px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -133,17 +133,22 @@
         }
 
         @media (max-width: 768px) {
+            .contact-section {
+                padding: 1.5rem 0.5rem 1rem 0.5rem;
+            }
             .contact-title {
-                font-size: 2.2rem;
+                font-size: 1.6rem;
             }
-
             .contact-info {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
-
             .social-links-container {
-                flex-direction: column;
-                gap: 2rem;
+                flex-direction: row !important;
+                gap: 1.2rem;
+                margin-top: 1rem;
+            }
+            .whatsapp-group {
+                margin-top: 1rem;
             }
         }
 
@@ -195,6 +200,11 @@
             }
             .movement-body-text p {
                 margin-bottom: 1.1rem;
+            }
+            .social-links-container {
+                flex-direction: row !important;
+                gap: 1.2rem;
+                margin-top: 1rem;
             }
         }
 
@@ -248,13 +258,27 @@
         .movement-title, .pledge-title {
             font-family: 'Anton', sans-serif;
             color: #c10016;
-            font-size: 2.5rem;
-            margin-bottom: 1.2rem;
+            font-size: 2.7rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2rem;
             text-align: center;
-            letter-spacing: 1px;
-            font-weight: 700;
+            letter-spacing: 1.5px;
+            font-weight: 900;
             text-transform: uppercase;
-            line-height: 1.1;
+            line-height: 1.12;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 700px;
+        }
+        .movement-title::after {
+            content: "";
+            display: block;
+            margin: 1.1rem auto 0 auto;
+            width: 60px;
+            height: 5px;
+            background: linear-gradient(90deg, #c10016 60%, #fffcf1 100%);
+            border-radius: 3px;
         }
         .movement-subtitle {
             font-family: 'DM Sans', sans-serif;
@@ -270,7 +294,8 @@
             color: #000;
             font-size: 1.18rem;
             line-height: 1.8;
-            text-align: left;
+            text-align: center;
+            margin-top: 0.5rem;
         }
         .movement-letter-body p {
             margin-bottom: 1.1rem;
@@ -294,11 +319,19 @@
                 max-width: 98vw;
                 padding-left: 1rem;
             }
-            .movement-title, .pledge-title, .contact-title {
-                font-size: 2rem !important;
+            .movement-title, .pledge-title, .contact-title, .start-here-title {
+                font-size: 2.2rem !important;
+                margin-top: 2rem;
+                margin-bottom: 1.5rem;
             }
-            .movement-subtitle { font-size: 1rem; }
-            .movement-letter-body { font-size: 1.05rem; }
+            .movement-title::after {
+                margin-top: 0.8rem;
+                width: 48px;
+                height: 4px;
+            }
+            .movement-letter-body {
+                font-size: 1.05rem;
+            }
         }
         @media (max-width: 600px) {
             .movement-letter-container {
@@ -310,20 +343,17 @@
                 align-items: center;
             }
             .movement-title {
-                font-size: 2rem !important;
-                margin-bottom: 1.2rem !important;
-                letter-spacing: 1.5px !important;
-                text-align: center !important;
+                font-size: 1.6rem !important;
+                margin-top: 1.2rem !important;
+                margin-bottom: 1.1rem !important;
+            }
+            .movement-title::after {
+                margin-top: 0.6rem;
+                width: 36px;
+                height: 3px;
             }
             .movement-letter-body {
-                font-size: 1.13rem !important;
-                line-height: 1.65 !important;
-                text-align: left !important;
-                width: 100%;
-                max-width: 420px;
-                margin-top: 0.5rem;
-                margin-bottom: 0.5rem;
-                display: block !important;
+                font-size: 1rem;
             }
             .movement-letter-body p {
                 margin-bottom: 0.7rem !important;
@@ -751,7 +781,7 @@
                 padding: 2.2rem 0 1.5rem 0;
             }
             .start-here-title {
-                font-size: 2rem;
+                font-size: 2.5rem !important;
             }
             .start-here-subtext {
                 font-size: 1.05rem;
@@ -805,7 +835,7 @@
     </header>
 
     <main>
-        <section style="min-height: 100vh; background-color: #fffcf1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 6rem 2rem; margin-bottom: 0;">
+        <section style="background-color: #fffcf1; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; padding: 2.5rem 1rem 4.5rem 1rem; min-height: 60vh; margin-bottom: 0;">
             <div class="movement-letter-container">
                 <h1 class="movement-title" style="margin-bottom: 1.5rem;">This Is the Movement</h1>
                 <div class="movement-letter-body">
