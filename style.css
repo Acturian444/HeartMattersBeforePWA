@@ -1652,6 +1652,7 @@ h1, h2, h3, h4, h5, h6, .logo-text, .center-logo, .nav-links a[href="info.html"]
     width: 24px;
     height: 24px;
     margin-bottom: 0.5rem;
+    filter: drop-shadow(0 2px 12px #fffcf1) !important;
   }
   .confirmation-headline {
     margin-bottom: 0.7rem;
@@ -1672,11 +1673,13 @@ h1, h2, h3, h4, h5, h6, .logo-text, .center-logo, .nav-links a[href="info.html"]
   }
   .headline-line2 {
     margin-bottom: 0.15em;
+    color: #fffcf1 !important;
   }
   .confirmation-message p {
     font-size: 0.95rem !important;
     line-height: 1.5 !important;
     margin-bottom: 0 !important;
+    color: #fffcf1 !important;
   }
 }
 
@@ -1734,10 +1737,21 @@ h1, h2, h3, h4, h5, h6, .logo-text, .center-logo, .nav-links a[href="info.html"]
 
 @media (min-width: 601px) and (max-width: 1024px) {
   .octagon-bg {
-    width: 90vw !important;
-    max-width: 750px !important;
-    height: 380px !important;
+    width: 100%;
+    max-width: 700px !important;
+    height: 320px !important;
+    margin: 0 auto !important;
     clip-path: polygon(15% 0%, 85% 0%, 100% 18%, 100% 82%, 85% 100%, 15% 100%, 0% 82%, 0% 18%) !important;
+    display: block;
+  }
+  #sign-the-pledge {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    min-height: 420px !important;
   }
 }
 
@@ -1746,4 +1760,37 @@ h1, h2, h3, h4, h5, h6, .logo-text, .center-logo, .nav-links a[href="info.html"]
     font-size: 1.3rem !important;
     color: #c10016 !important;
   }
+}
+
+@media (max-width: 600px) {
+  #sign-the-pledge {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 320px !important;
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+    margin-bottom: 0 !important;
+  }
+  .octagon-bg {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+.octagon-bg {
+  display: none !important;
+}
+
+.confirmation-message .headline-line2,
+.confirmation-message .headline-line1,
+.confirmation-message p {
+  color: #fffcf1 !important;
+}
+.confirmation-message .headline-line2 {
+  font-weight: 900 !important;
+}
+.confirmation-heart svg rect {
+  fill: #fffcf1 !important;
 } 
